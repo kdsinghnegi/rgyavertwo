@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS "main_menu";
+CREATE TABLE "main_menu" ("cat_id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "name" TEXT);

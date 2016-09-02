@@ -1,0 +1,31 @@
+div.appHeader
+{
+
+float: left;
+
+width: 100%;
+
+border-bottom: 1px solid #d0d0d0;
+}
+
+h1.Apptitle
+{float: left;color: #00ffe9;width: 50%;font-size: 21px;margin: 15px auto;}
+
+div.langunageOption
+{float: right;width: 25%;}
+
+div.langunageOption span
+{
+	
+font-size: 19px;
+	
+float: left;
+	
+margin: 15px auto;
+}
+
+div.langunageOption span.active
+{
+	
+}
+

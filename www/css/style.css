@@ -1,0 +1,235 @@
+    /*
+    To change this license header, choose License Headers in Project Properties.
+    To change this template file, choose Tools | Templates
+    and open the template in the editor.
+    */
+    /* 
+        Created on : 12 Aug, 2016, 11:32:40 AM
+        Author     : NexGen
+    */
+    body
+    {
+         -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+        -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+        -webkit-user-select: none;        
+    }
+
+    div.main_container
+    {
+        float: left;
+        background: whitesmoke;
+        width: 100%;
+        height: 100%;
+    }
+
+    div.navigator
+    {
+        background: white;
+        /* top: 0; */
+        /* margin: 0; */
+        float: left;
+    }
+
+    div.navigator ul
+    {
+        margin: 0;
+        list-style: none;
+        float: left;
+        padding: 0;
+        /* width: 95%; */
+        border-bottom: 5px solid  orange;
+        position: fixed;
+        background: white;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+
+    div.navigator ul li
+    {
+        float: left;
+        margin: 6px;
+        /* width: 7%; */
+        text-align: center;
+    }
+
+
+    div.navigator ul li span
+    {
+        font-size: 22px;
+        color: #212020;
+    }
+    div.main_god_container
+    {
+        margin: 48px auto;
+    }
+
+    div.main_god_container div.godDiv
+    {
+        /* width: 44%; */
+        float: left;
+        margin: 3% auto;
+        background: white;
+        padding: 5px;
+    }
+
+    div.main_god_container div.godDiv img
+    {
+        width: 100%;
+    }
+    div.main_god_container h1.godTitle 
+    {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        color: #2b2b2b;
+        font-family: Arial,sans-serif;
+    }
+
+    div.MantraContainer
+    {
+        float: left;
+        width: 100%;
+        margin: 48px auto;
+    }
+
+    div.mantra
+    {
+        background: white;
+        padding: 2px;
+        margin: 3% 3px;
+        border: 1px solid #d2d2d2;
+        float: left;
+    }
+    div.mantra img
+    {
+        width: 30%;
+        float: left;
+        margin: 1%;
+    }
+
+    div.mantra p
+    {
+        font-size: 13px;
+        font-family: arial,sans-serif;
+        color: #3a3a3a;
+        margin: 0;
+        padding: 3px;
+        text-align: left;
+    }
+    div.mantra p span
+    {
+        color: #36b4ca;
+        font-size: 11px;
+    }
+
+    div.mantra h1
+    {
+        font-size: 14px;
+        /* margin: 3px; */
+        font-weight: bold;
+    }
+    div.MantraDetailContainer
+    {
+        float: left;
+        width: 100%;
+        margin: 48px auto;
+    }
+    h1.MantraTitle
+    {
+        font-size: 12px;
+        font-family: arial,sans-serif;
+        margin: 0px 0px auto;
+        background: whitesmoke;
+        padding: 5px 0px;
+        width: 100%;
+        float: left;
+    }
+    div.navigator ul li.appName
+    {
+        float: left;
+        text-align: right;
+    }
+    div.navigator ul li.appName h1
+    {
+        font-size: 15px;
+        margin: 5px auto;
+        padding: 0;
+        text-transform: uppercase;
+        font-family: Arial,sans-serif;
+        text-align: right;
+        color: #3bcde6;
+        font-weight: bold;
+    }
+
+    div.navigator ul li.language
+    {
+        float: right;
+
+        font-weight: bold;
+    }
+
+    div.navigator ul li.language span
+    {
+        font-size: 14px;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    ul.main_category
+    {
+        margin: 48px auto;
+        padding: 0;
+        list-style: none;
+        float: left;
+        width: 100%;
+    }
+
+
+    ul.main_category li
+    {
+
+    }
+
+
+    ul.main_category li h1
+    {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 11%;
+        background: white;
+        margin: 4px;
+
+            background-image: url('../img/godhanuman.jpg');
+        background-size: cover;
+        color: white;
+    }
+
+    audio.player
+    {
+            width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 2222222;
+        left: 0;
+    }
+div.mantra div
+{
+    float: left;
+}
+span.songIcon
+{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: #337ab7;
+}
+div.mantra  h1.postTitle
+{
+    margin: 3px;
+}
+span.readMore
+{
+    color: #00ffff;
+    font-size: 12px;
+}

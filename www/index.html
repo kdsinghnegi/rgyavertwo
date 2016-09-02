@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />-->
+        <meta http-equiv="Content-Security-Policy" content="
+              default-src *; 
+              style-src * 'unsafe-inline'; 
+              script-src * 'unsafe-inline'; 
+              media-src *; img-src * data:; 
+              " />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add "unsafe-inline" to default-src
+            * Enable eval(): add "unsafe-eval" to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src "self" data: gap: "unsafe-inline" https://ssl.gstatic.com; style-src "self" "unsafe-inline"; media-src *" /> -->
+
+        <!--      <link rel="stylesheet" type="text/css" href="./css/boot.css"/>-->
+        <script src="cordova.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>		 
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="js/angular.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!--      <link href="./css/navbar-fixed-top.css" rel="stylesheet">-->
+    </head>
+    <body ng-app="rgyan"  class="container-fluid" >
+        <div class="app row " ng-controller="rgyanCotrl" >
+            <div class="main_container">
+                <div class="navigator col-lg-12 col-sm-12 col-xs-12 ">
+                    <ul class="col-lg-12 col-sm-12 col-xs-12">
+                        <li ng-click="backScreen()">
+                            <span class="fa {{homeIcon}}"></span>   
+                        </li>
+                        <li class="language">
+                            <span >En</span>   
+                        </li>
+                        <li class="language">
+                            <span ng-click="close_aap()"  >Hi</span>   
+                        </li>
+
+                        <li class="appName">
+                            <h1>{{app_title}}</h1>
+                        </li>
+
+                    </ul>
+                </div> 
+
+                <div class=" {{MainCatStatus}}">
+
+                    <ul class="main_category">
+                        <!--                        {{MainCategory}}-->
+                        <li ng-repeat="cat in MainCategory" >
+                            <h1 ng-click="show_sub_category(cat.cat_id)"  style="background-image: url(img/{{cat.offline_bg_img}})">{{cat.name}}</h1> 
+                            <!--                            <h1 style=" background-image: url('img/image-2.png');">Mantra</h1> 
+                                                        <h1 style=" background-image: url('img/image-3.png');">Varat</h1> 
+                                                        <h1 style=" background-image: url('img/image-4.png');">Vandana</h1> -->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main_god_container col-lg-12 {{MainSubCatStatus}}  ">
+
+                    <!--                    sub category-->
+                    <div class="godDiv col-xs-6" ng-repeat="sub_cat in MainSubCategory">
+                        <div ng-click="show_post(sub_cat.cat_id)">
+                            <img src="img/{{sub_cat.offline_bg_img}}"/>
+                            <h1 class="godTitle">{{sub_cat.name}}</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="MantraContainer {{PostStatus}} ">
+
+                    <!--                    <div ng-repeat="x in mantra">
+                                            {{x["mantra"]}}
+                                        </div>-->
+
+                    <div class="mantra" ng-repeat="posts in Post">
+                        <div  ng-click="show_post_desc(posts.post_des_id)">
+                            <img src="img/{{posts.offline_thumb_img}}"/>
+                            <h1 class='postTitle'>{{posts.post_title}}</h1>
+                            <p>
+                                {{posts.post_desc}}
+
+
+                            </p>
+
+                            <span class="readMore">Read More</span> <span class="fa fa-play-circle "></span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--                <button type="button" ng-click="DownloadDataBase()">Download Database</button>
+                                <button type="button" ng-click="ImportDataInTables()">Import In tables</button>
+                                <button type="button" ng-click="appInit()">App Init In tables</button>-->
+
+
+
+                <div class="MantraDetailContainer  {{PostDescStatus}}">
+                    <!--                    {{PostDesc}}-->
+                    <div class="mantra " ng-repeat="post in PostDesc">
+
+                        <h1 class="MantraTitle">
+                            {{post.post_title}}
+                        </h1>
+                        <p>
+                            {{post.post_desc}}
+
+                        </p>
+                        <span class="fa fa-play-circle songIcon"></span>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <audio  class="player" ng-src="{{PlaySong}}" controls ="loop" autoplay="true" >
+                <source id="player"  type="audio/mpeg" >
+                Your browser does not support the <code>audio</code> tag.
+            </audio>
+        </div>
+
+
+
+    </body>
+</html>
+
+
+<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="js/syncro.js"></script>-->
+<!--  {{CreateDatabase()}}-->
+<script type="text/javascript" src="js/setting.js"></script>
+
